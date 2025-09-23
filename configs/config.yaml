@@ -1,0 +1,48 @@
+dataset:
+  data: "ETTm1"
+  batch_size: 32
+  features: 'M'  
+
+model:
+  # base param
+  n_blocks: 3
+  e_layers: 1
+  d_model: 32
+  n_heads: 4
+  d_ff: 512
+
+  # patch param
+  padding_patch: 'end'
+  patch_len: 16
+  stride: 8
+  # dropout
+  dropout: 0.1
+  fc_dropout: 0.05
+  head_dropout: 0.0
+  # DySeFormer
+  topk: 4
+  revin: 1
+  # time freq
+  freq: 's'
+  use_timestamp: "False"
+
+gpu:
+  use_multi_gpu: "False"
+  devices: "0,1"
+
+training:
+  itr: 3
+  is_training: 1
+  seq_len: 96
+  pred_len: 96
+  patience: 10
+  train_epochs: 100
+  learning_rate: 0.001
+
+
+predict:
+  is_training: 0
+  save_step: 10
+  itr: 1
+  seq_len: 96
+  pred_len: 96

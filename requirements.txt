@@ -1,0 +1,11 @@
+einops==0.8.1
+h5py==3.14.0
+numpy==2.3.3
+pandas==2.3.2
+ptflops==0.7.5
+PyYAML==6.0.2
+scikit_learn==1.7.2
+torch==2.6.0+cu124
+torchinfo==1.8.0
+tqdm==4.67.1
+
