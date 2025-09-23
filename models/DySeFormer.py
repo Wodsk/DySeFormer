@@ -72,38 +72,3 @@ class Model(nn.Module):
         
         return x
     
-
-class configs:
-    def __init__(self):
-        self.enc_in = 5
-        self.seq_len = 96
-        self.pred_len = 96
-        self.n_blocks = 3
-        self.patch_len = 16
-        self.stride = 8
-        self.win_size = 2
-        self.e_layers = 1
-        self.n_heads = 1
-        self.d_model = 32
-        self.d_ff = 256
-        self.dropout = 0.1
-        self.fc_dropout = 0.1
-        self.head_dropout = 0.1
-        self.individual = False
-        self.padding_patch = 'end'
-        self.revin = True
-        self.affine = False
-        self.subtract_last = False
-        self.decomposition = 0
-        self.kernel_size = 3
-        self.topk = 2
-        self.use_timestamp = False
-
-
-if __name__ == '__main__':
-    config = configs()
-    x = torch.rand(2, 96, 5) # x: [Batch, Input length, Channel]
-    timestamp  = torch.randn(2, 96, 6)
-    self_model = Model(config)
-    out = self_model(x, timestamp)
-    print(out.shape)
