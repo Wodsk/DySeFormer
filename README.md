@@ -1,5 +1,5 @@
 # DySeFormer
-This repository maintains the official implementation of methods and experiments presented in our paper titled "DySeFormer: Dynamic Selective Transformer for Multivariate Time Series Forecasting"
+[ICIG 2026] Official implementation of DySeFormer: Dynamic Selective Transformer for Multivariate Time Series Forecasting.
 
 ## Preparation for Environment
 ### 1. Create a conda environment
